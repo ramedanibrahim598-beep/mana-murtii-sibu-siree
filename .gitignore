@@ -1,0 +1,6 @@
+node_modules/
+court-portfolio/node_modules/
+.vscode/
+*.log
+dist/
+court-portfolio/dist/
