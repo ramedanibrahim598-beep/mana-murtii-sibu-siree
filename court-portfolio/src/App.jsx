@@ -4,6 +4,7 @@ import { onAuthStateChanged } from 'firebase/auth'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import MissionVision from './components/MissionVision'
 import Services from './components/Services'
 import News from './components/News'
 import Contact from './components/Contact'
@@ -50,6 +51,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <MissionVision />
       <Services />
       <News />
       <Contact />

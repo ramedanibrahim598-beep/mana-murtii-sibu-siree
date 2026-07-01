@@ -10,11 +10,9 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo / Name */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center font-bold text-[#0a1628] text-lg">
-            ⚖
-          </div>
+          <img src="/photo_2026-07-01_16-32-53.jpg" alt="Court Logo" className="w-10 h-10 object-cover rounded-full"/>
           <span className="font-bold text-xl tracking-wide">
-            Mana Murtii Aanaa Sibu Siree
+            Sibuu Siree, Magaalaa Siree
           </span>
         </div>
 
