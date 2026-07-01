@@ -57,7 +57,7 @@ export default function Contact() {
               {
                 icon: '📍',
                 title: 'Address',
-                info: '123 Justice Avenue, Courthouse Square, City, State 00100',
+                info: 'Sibuu Siree, Magaalaa Siree',
               },
               {
                 icon: '📞',
