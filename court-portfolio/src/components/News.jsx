@@ -49,7 +49,7 @@ export default function News() {
   }
 
   return (
-    <section id="news" className="py-20 px-6 bg-white">
+    <section id="news" className="py-20 px-6 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
@@ -103,7 +103,7 @@ export default function News() {
             {paginated.map((item) => (
               <article
                 key={item.id}
-                className="bg-gray-50 rounded-xl border border-gray-100 hover:shadow-lg hover:border-yellow-300 transition-all duration-200 flex flex-col"
+                className="bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 hover:shadow-lg hover:border-yellow-300 transition-all duration-200 flex flex-col"
               >
                 <div className="h-1 rounded-t-xl bg-yellow-400" />
                 <div className="p-6 flex flex-col flex-1">
@@ -114,10 +114,10 @@ export default function News() {
                     <span className="text-2xl">{item.icon || '📢'}</span>
                   </div>
                   <p className="text-xs text-gray-400 mb-2">{item.date}</p>
-                  <h3 className="text-base font-bold text-[#0a1628] mb-3 leading-snug">
+                  <h3 className="text-base font-bold text-[#0a1628] dark:text-white mb-3 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed flex-1">{item.body}</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed flex-1">{item.body}</p>
                   {/* Hojii beeksisa — Register button */}
                   {item.category === 'Hojii' && item.formLink && (
                     <a

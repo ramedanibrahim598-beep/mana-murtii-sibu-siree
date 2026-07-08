@@ -39,13 +39,13 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-6 bg-gray-50">
+    <section id="contact" className="py-20 px-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-yellow-600 font-semibold uppercase tracking-widest text-sm">
             Get In Touch
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0a1628] mt-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0a1628] dark:text-white mt-2">
             Nu Quunnamaa
           </h2>
         </div>
@@ -56,23 +56,23 @@ export default function Contact() {
             {[
               {
                 icon: '📍',
-                title: 'Address',
-                info: 'Sibuu Siree, Magaalaa Siree',
+                title: 'Teessoo',
+                info: 'Godina Wallagaa Bahaa, Aanaa Sibu Siree\nMagaalaa Siree',
               },
               {
                 icon: '📞',
-                title: 'Phone',
-                info: '+1 (555) 123-4567',
+                title: 'Bilbila',
+                info: '0984024074',
               },
               {
                 icon: '✉️',
                 title: 'Email',
-                info: 'clerk@districtcourt.gov',
+                info: 'manamurtiiaanaasibuusiree2018@gmail.com',
               },
               {
                 icon: '🕒',
-                title: 'Office Hours',
-                info: 'Monday – Friday: 8:00 AM – 5:00 PM\nSaturday – Sunday: Closed',
+                title: 'Sa\'aatii Hojii',
+                info: 'Wiixata – Jimaata: Sa\'a 2:30 – 11:30\nSanbata – Dilbata: Cufaa',
               },
             ].map((item) => (
               <div key={item.title} className="flex gap-4 items-start">
@@ -88,7 +88,7 @@ export default function Contact() {
           {/* Form */}
           <form
             onSubmit={handleSubmit}
-            className="bg-white rounded-xl shadow p-8 space-y-4 border border-gray-100"
+            className="bg-white dark:bg-gray-700 rounded-xl shadow p-8 space-y-4 border border-gray-100 dark:border-gray-600"
           >
             {/* Success */}
             {success && (

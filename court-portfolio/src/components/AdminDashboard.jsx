@@ -465,7 +465,7 @@ export default function AdminDashboard() {
                         </div>
                         <div className="pt-2 flex gap-3">
                           <a
-                            href={`mailto:${msg.email}?subject=Re: ${msg.subject}`}
+                            href={`mailto:manamuriiaanaasibuusiree2018@gmail.com?subject=Re: ${msg.subject}&body=Obbo/Aaddee ${msg.name},`}
                             className="text-sm bg-yellow-500 hover:bg-yellow-400 text-[#0a1628] font-semibold px-4 py-2 rounded-lg transition-colors"
                           >
                             📧 Deebii Ergi

@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { auth } from './firebase'
 import { onAuthStateChanged } from 'firebase/auth'
+import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
-import MissionVision from './components/MissionVision'
 import Services from './components/Services'
 import News from './components/News'
 import Contact from './components/Contact'
@@ -17,7 +17,6 @@ function App() {
   const [user, setUser] = useState(null)
   const [authLoading, setAuthLoading] = useState(true)
 
-  // Admin page yoo URL /admin ta'e agarsiisi
   const isAdmin = window.location.pathname === '/admin'
 
   useEffect(() => {
@@ -32,7 +31,6 @@ function App() {
     return () => unsub()
   }, [isAdmin])
 
-  // Admin route
   if (isAdmin) {
     if (authLoading) {
       return (
@@ -45,18 +43,18 @@ function App() {
     return <AdminDashboard />
   }
 
-  // Main website
   return (
-    <div className="font-sans bg-white text-gray-800">
-      <Navbar />
-      <Hero />
-      <About />
-      <MissionVision />
-      <Services />
-      <News />
-      <Contact />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="font-sans bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
+        <Navbar />
+        <Hero />
+        <About />
+        <Services />
+        <News />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   )
 }
 

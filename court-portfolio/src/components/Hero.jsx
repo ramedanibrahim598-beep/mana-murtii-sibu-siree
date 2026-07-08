@@ -1,3 +1,5 @@
+import logoImg from '../assets/photo_2026-07-01_16-32-53.jpg'
+
 export default function Hero() {
   return (
     <section
@@ -5,7 +7,13 @@ export default function Hero() {
       className="bg-[#0a1628] text-white min-h-[90vh] flex items-center justify-center text-center px-6"
     >
       <div className="max-w-3xl">
-        <div className="text-yellow-400 text-5xl mb-6">⚖️</div>
+        <div className="flex justify-center mb-6">
+          <img
+            src={logoImg}
+            alt="Mana Murtii Aanaa Sibu Siree Logo"
+            className="w-28 h-28 rounded-full object-cover border-4 border-yellow-400 shadow-lg"
+          />
+        </div>
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
           Mana Murtii Aanaa Sibu Siree
         </h1>

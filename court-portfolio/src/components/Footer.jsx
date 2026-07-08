@@ -1,9 +1,11 @@
+import logoImg from '../assets/photo_2026-07-01_16-32-53.jpg'
+
 export default function Footer() {
   return (
     <footer className="bg-[#0a1628] text-gray-400 py-8 px-6 text-center text-sm">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-white font-semibold">
-          <span>⚖</span>
+          <img src={logoImg} alt="Logo" className="w-8 h-8 rounded-full object-cover border border-yellow-400" />
           <span>Mana Murtii Aanaa Sibu Siree</span>
         </div>
         <p>© {new Date().getFullYear()} Mana Murtii Aanaa Sibu Siree. Mirgi kaa'ameera.</p>
