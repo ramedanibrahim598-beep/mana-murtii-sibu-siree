@@ -49,7 +49,7 @@ export default function News() {
   }
 
   return (
-    <section id="news" className="py-20 px-6 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section id="news" className="py-20 px-6 section-primary">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">

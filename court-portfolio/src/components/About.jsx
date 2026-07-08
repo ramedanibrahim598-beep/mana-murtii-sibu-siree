@@ -1,25 +1,27 @@
 import presidentImg from '../assets/photo_2026-07-08_14-18-29.jpg'
 import wandimmuImg from '../assets/photo_2026-07-08_14-36-16.jpg'
+import tafariImg from '../assets/photo_2026-07-08_15-24-13.jpg'
+import mallasaImg from '../assets/photo_2026-07-08_15-30-42.jpg'
 
 export default function About() {
   return (
     <>
       {/* ── About Section ── */}
-      <section id="about" className="py-20 px-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+      <section id="about" className="py-20 px-6 section-secondary">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <span className="text-yellow-600 font-semibold uppercase tracking-widest text-sm">
               About Us
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0a1628] dark:text-white mt-2 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0a1628] dark:text-white mt-2 mb-6" style={{color: 'var(--text-primary)'}}>
               Tajaajila Haqa Kennaafi
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+            <p className="leading-relaxed mb-4 text-sub">
               Mana Murtii Aanaa Sibu Siree tajaajila seeraa haqa, gahumsa qabu,
               fi ummataaf banaa ta'e kennuuf kutannoo guutuu qaba. Hojjettoonni
               muuxannoo qaban dhimma hunda ogummaa fi kabajaan kan hojjetan dha.
             </p>
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="leading-relaxed text-sub">
               Galmeewwan murtii eegna, dhaddacha seeraa gaggeessina, fi tajaajila
               ummataa adda addaa dhiyeessina — nageenyaa fi mirga namaa kabajuun.
             </p>
@@ -31,9 +33,9 @@ export default function About() {
               { value: '5', label: 'Kutaa Dhaddachaa' },
               { value: '24/7', label: 'Galmee Online' },
             ].map((stat) => (
-              <div key={stat.label} className="bg-white dark:bg-gray-700 rounded-xl shadow p-6 text-center border border-gray-100 dark:border-gray-600">
+              <div key={stat.label} className="stat-card rounded-xl shadow p-6 text-center border">
                 <div className="text-3xl font-bold text-yellow-500 mb-1">{stat.value}</div>
-                <div className="text-gray-600 dark:text-gray-300 text-sm">{stat.label}</div>
+                <div className="text-sm text-sub">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -41,7 +43,7 @@ export default function About() {
       </section>
 
       {/* ── Dhaamsa Pirezidaantii ── */}
-      <section className="py-20 px-6 bg-white dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-20 px-6 section-primary">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <span className="text-yellow-600 font-semibold uppercase tracking-widest text-sm">
@@ -76,7 +78,7 @@ export default function About() {
             {/* Dhaamsa */}
             <div className="md:col-span-2 relative">
               <div className="text-yellow-300 text-8xl font-serif leading-none absolute -top-4 -left-2 select-none">"</div>
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm relative z-10">
+              <div className="president-msg rounded-2xl p-8 border shadow-sm relative z-10">
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                   Ummata kabajamoo, Mana Murtii Aanaa Sibu Siree tajaajila seeraa haqa,
                   bilisummaa fi kabaja qabu kennuuf hundaa'e. Waggootaa hedduuf ummatni
@@ -116,7 +118,7 @@ export default function About() {
       </section>
 
       {/* ── Team Section ── */}
-      <section className="py-16 px-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+      <section className="py-16 px-6 section-secondary">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <span className="text-yellow-600 font-semibold uppercase tracking-widest text-sm">
@@ -126,14 +128,45 @@ export default function About() {
               Gareen Keenya
             </h2>
           </div>
-          <div className="flex justify-center">
-            <div className="bg-white dark:bg-gray-700 rounded-2xl shadow-md border border-gray-100 dark:border-gray-600 hover:shadow-xl hover:border-yellow-300 transition-all duration-300 p-6 text-center w-72">
+          <div className="flex justify-center flex-wrap gap-8">
+            {/* Wandimmuu Olumaa */}
+            <div className="team-card rounded-2xl shadow-md border hover:shadow-xl hover:border-yellow-300 transition-all duration-300 p-6 text-center w-72">
               <div className="w-36 h-36 rounded-full overflow-hidden mx-auto mb-4 border-4 border-yellow-400 shadow">
                 <img src={wandimmuImg} alt="Wandimmuu Olumaa" className="w-full h-full object-cover object-top" />
               </div>
               <h3 className="text-lg font-bold text-[#0a1628] dark:text-white">Wandimmuu Olumaa</h3>
               <p className="text-yellow-600 font-medium text-sm mt-1">TQO — Teknoolojii Qunnamtii Odeeffannoo</p>
               <p className="text-gray-500 dark:text-gray-400 text-xs mt-1">Kutaa IT</p>
+              <div className="flex gap-1 justify-center mt-3">
+                <span className="w-8 h-1 rounded-full bg-yellow-500" />
+                <span className="w-3 h-1 rounded-full bg-yellow-300" />
+                <span className="w-2 h-1 rounded-full bg-yellow-200" />
+              </div>
+            </div>
+
+            {/* Taffarii Baqalaa */}
+            <div className="team-card rounded-2xl shadow-md border hover:shadow-xl hover:border-yellow-300 transition-all duration-300 p-6 text-center w-72">
+              <div className="w-36 h-36 rounded-full overflow-hidden mx-auto mb-4 border-4 border-yellow-400 shadow">
+                <img src={tafariImg} alt="Taffarii Baqalaa" className="w-full h-full object-cover object-top" />
+              </div>
+              <h3 className="text-lg font-bold text-[#0a1628] dark:text-white">Taffarii Baqalaa</h3>
+              <p className="text-yellow-600 font-medium text-sm mt-1">Hojjetaa Hawasummaa</p>
+              <p className="text-gray-500 dark:text-gray-400 text-xs mt-1">Kutaa Social Work</p>
+              <div className="flex gap-1 justify-center mt-3">
+                <span className="w-8 h-1 rounded-full bg-yellow-500" />
+                <span className="w-3 h-1 rounded-full bg-yellow-300" />
+                <span className="w-2 h-1 rounded-full bg-yellow-200" />
+              </div>
+            </div>
+
+            {/* Mallasaa Tommaa */}
+            <div className="team-card rounded-2xl shadow-md border hover:shadow-xl hover:border-yellow-300 transition-all duration-300 p-6 text-center w-72">
+              <div className="w-36 h-36 rounded-full overflow-hidden mx-auto mb-4 border-4 border-yellow-400 shadow">
+                <img src={mallasaImg} alt="Mallasaa Tommaa" className="w-full h-full object-cover object-top" />
+              </div>
+              <h3 className="text-lg font-bold text-[#0a1628] dark:text-white">Mallasaa Tommaa</h3>
+              <p className="text-yellow-600 font-medium text-sm mt-1">Bulchiinsaa fi Faayinaansii</p>
+              <p className="text-gray-500 dark:text-gray-400 text-xs mt-1">Kutaa Administration & Finance</p>
               <div className="flex gap-1 justify-center mt-3">
                 <span className="w-8 h-1 rounded-full bg-yellow-500" />
                 <span className="w-3 h-1 rounded-full bg-yellow-300" />

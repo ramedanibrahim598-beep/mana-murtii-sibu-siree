@@ -39,7 +39,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <section id="contact" className="py-20 px-6 section-secondary">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-yellow-600 font-semibold uppercase tracking-widest text-sm">
@@ -86,10 +86,7 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <form
-            onSubmit={handleSubmit}
-            className="bg-white dark:bg-gray-700 rounded-xl shadow p-8 space-y-4 border border-gray-100 dark:border-gray-600"
-          >
+          <form onSubmit={handleSubmit} className="contact-form card rounded-xl shadow p-8 space-y-4 border">
             {/* Success */}
             {success && (
               <div className="bg-green-50 border border-green-200 text-green-700 text-sm rounded-lg px-4 py-3 flex items-center gap-2">
