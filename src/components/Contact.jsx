@@ -4,6 +4,17 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
 
 const emptyForm = { name: '', email: '', subject: '', message: '' }
 
+const s = {
+  textPrimary: { color: 'var(--text-primary)' },
+  textSub: { color: 'var(--text-secondary)' },
+  label: { color: 'var(--text-secondary)', fontSize: '0.875rem', fontWeight: '500' },
+  input: {
+    backgroundColor: 'var(--bg-card)',
+    color: 'var(--text-primary)',
+    borderColor: 'var(--border-color)',
+  },
+}
+
 export default function Contact() {
   const [form, setForm] = useState(emptyForm)
   const [loading, setLoading] = useState(false)
@@ -43,9 +54,9 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-yellow-600 font-semibold uppercase tracking-widest text-sm">
-            Get In Touch
+            Nu Quunnamuuf
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0a1628] dark:text-white mt-2">
+          <h2 className="text-3xl md:text-4xl font-bold mt-2" style={s.textPrimary}>
             Nu Quunnamaa
           </h2>
         </div>
@@ -67,7 +78,7 @@ export default function Contact() {
               {
                 icon: '✉️',
                 title: 'Email',
-                info: 'manamurtiiaanaasibuusiree2018@gmail.com',
+                info: 'manamuriiaanaasibuusiree2018@gmail.com',
               },
               {
                 icon: '🕒',
@@ -78,8 +89,8 @@ export default function Contact() {
               <div key={item.title} className="flex gap-4 items-start">
                 <div className="text-2xl">{item.icon}</div>
                 <div>
-                  <h4 className="font-semibold text-[#0a1628]">{item.title}</h4>
-                  <p className="text-gray-600 text-sm whitespace-pre-line">{item.info}</p>
+                  <h4 className="font-semibold text-sm" style={s.textPrimary}>{item.title}</h4>
+                  <p className="text-sm whitespace-pre-line mt-0.5" style={s.textSub}>{item.info}</p>
                 </div>
               </div>
             ))}
@@ -94,7 +105,6 @@ export default function Contact() {
                 <span>Ergaan si milkaa'inaan ergame! Galatoomaa.</span>
               </div>
             )}
-
             {/* Error */}
             {error && (
               <div className="bg-red-50 border border-red-200 text-red-600 text-sm rounded-lg px-4 py-3">
@@ -103,9 +113,7 @@ export default function Contact() {
             )}
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Maqaa Guutuu
-              </label>
+              <label className="block mb-1" style={s.label}>Maqaa Guutuu</label>
               <input
                 type="text"
                 name="name"
@@ -113,14 +121,13 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Maqaa kee barreessi"
                 required
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full border rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                style={s.input}
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Email Address
-              </label>
+              <label className="block mb-1" style={s.label}>Email Address</label>
               <input
                 type="email"
                 name="email"
@@ -128,14 +135,13 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="email@fakkeenyaa.com"
                 required
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full border rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                style={s.input}
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Mata-duree
-              </label>
+              <label className="block mb-1" style={s.label}>Mata-duree</label>
               <input
                 type="text"
                 name="subject"
@@ -143,14 +149,13 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Dhimmaa ykn lakk. dhaddachaa"
                 required
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full border rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                style={s.input}
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Ergaa
-              </label>
+              <label className="block mb-1" style={s.label}>Ergaa</label>
               <textarea
                 name="message"
                 value={form.message}
@@ -158,7 +163,8 @@ export default function Contact() {
                 rows={4}
                 placeholder="Gaaffii ykn ergaa kee barreessi..."
                 required
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
+                className="w-full border rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
+                style={s.input}
               />
             </div>
 

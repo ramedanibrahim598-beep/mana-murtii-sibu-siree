@@ -26,13 +26,13 @@ export default function Hero() {
             href="#services"
             className="bg-yellow-500 hover:bg-yellow-400 text-[#0a1628] font-semibold px-8 py-3 rounded-lg transition-colors duration-200"
           >
-            Our Services
+            Tajaajila Keenya
           </a>
           <a
             href="#contact"
             className="border border-yellow-500 hover:bg-yellow-500 hover:text-[#0a1628] text-yellow-400 font-semibold px-8 py-3 rounded-lg transition-colors duration-200"
           >
-            Contact Us
+            Nu Quunnamaa
           </a>
         </div>
       </div>

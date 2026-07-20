@@ -9,13 +9,6 @@ export default function Footer() {
           <span>Mana Murtii Aanaa Sibu Siree</span>
         </div>
         <p>© {new Date().getFullYear()} Mana Murtii Aanaa Sibu Siree. Mirgi kaa'ameera.</p>
-        <div className="flex gap-6 flex-wrap justify-center">
-          <a href="#home" className="hover:text-yellow-400 transition-colors">Home</a>
-          <a href="#about" className="hover:text-yellow-400 transition-colors">About</a>
-          <a href="#services" className="hover:text-yellow-400 transition-colors">Services</a>
-          <a href="#news" className="hover:text-yellow-400 transition-colors">News</a>
-          <a href="#contact" className="hover:text-yellow-400 transition-colors">Contact</a>
-        </div>
       </div>
     </footer>
   )
